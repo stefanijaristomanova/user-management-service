@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: issue-service
+  #  jpa:
+  #    properties:
+  #      hibernate:
+  #        jdbc:
+  #          time_zone: UTC
+  jackson:
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+    time-zone: UTC
+#  mvc:
+#    dispatch-options-request: true
+#  zipkin:
+#    enabled: false
+
+#management:
+#  endpoint:
+#    health:
+#      show-details: always
+
+authorization:
+  enabled: true
+jwt:
+  secret: JWTSuperSecretKey
+  expirationInMs: 43200000
+#logbook:
+#  include:
+#    - /api/**
+#  exclude:
+#    - /actuator/**
+#  filter.enabled: true
+#  secure-filter.enabled: false
+#  format.style: json
+#  strategy: without-body
+#  minimum-status: 200
+server:
+  port: 8010
+  servlet:
+    context-path: /api
